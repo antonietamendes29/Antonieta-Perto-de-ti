@@ -1,0 +1,1192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1A3C5E;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    height: 64px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    width: auto;
+}
+.pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.pesquisa input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    font-size: 14px;
+    outline: none;
+    width: 220px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pesquisa button {
+    background-color: #46D1DD;
+    color: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.pesquisa button:hover {
+    background-color: #ffffff;
+    color: #1A3C5E;
+}
+
+/* Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #46D1DD;
+    border-bottom-color: #46D1DD;
+}
+
+/* Botão */
+.nav-botao {
+    background: #46D1DD;
+    color: #fff !important;
+    padding: 8px 20px !important;
+    border-radius: 6px;
+    border-bottom: none !important;
+    transition: background 0.2s !important;
+}
+
+.nav-botao:hover {
+    background: #ffffff;
+    color: #1A3C5E !important;
+    border-bottom-color: transparent !important;
+}
+
+/* Hero */
+.hero {
+    background: #f5f5f5;
+    padding-bottom: 60px;
+    text-align: center;
+    position: relative;
+    margin-top: 0;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* Hero texto */
+.hero-texto {
+    text-align: center;
+    width: 100%;
+    padding: 40px 40px 10px 40px;
+    background-color: #1A3C5E;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Passos */
+.passos {
+    background-color: #1A3C5E;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap;
+    padding: 20px 40px 60px 40px;
+}
+
+.passo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    width: 200px;
+}
+
+.passo h2 {
+    color: #46D1DD;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.passo p {
+    color: #ffffff;
+    font-size: 14px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.icone-passo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-passo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icone-passo i {
+    font-size: 50px;
+    color: #46D1DD;
+}
+
+/* Sobre */
+.sobre {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.sobre h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.sobre > p {
+    max-width: 700px;
+    margin: 0 auto 10px auto;
+}
+
+.sobre-link {
+    display: inline-block;
+    color: #333;
+    text-decoration: underline;
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.sobre-link:hover {
+    color: #46D1DD;
+}
+
+.caixas {
+    display: flex;
+    gap: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.caixa-esquerda {
+    background-color: #1A3C5E;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-right: 30px solid #fff;
+}
+
+.esquerda {
+    border-left: 4px solid #ffffff;
+    padding-left: 12px;
+}
+
+.esquerda h3 {
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.esquerda p {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.link {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.lado-direito {
+    background-color: #46D1DD;
+    padding: 30px;
+    flex: 1;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.sobre-foto {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 120px;
+}
+
+.sobre-foto:nth-child(3) {
+    grid-column: 1 / -1;
+    height: 140px;
+}
+
+.sobre-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn-galeria {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #1A3C5E;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.botao-galeria {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-galeria:hover {
+    background-color: #ffffff;
+    color: #1A3C5E;
+}
+
+/* Perguntas */
+.ver-respostas {
+    color: #46D1DD;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ver-respostas:hover {
+    color: #1A3C5E;
+}
+.perguntas {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.perguntas h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.perguntas > p {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.perguntas > p a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.perguntas-grelha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    text-align: left;
+}
+
+.pergunta-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff;
+}
+
+.pergunta-categoria {
+    font-size: 12px;
+    color: #888;
+}
+
+.pergunta-titulo {
+    background-color: #46D1DD;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pergunta-titulo:hover {
+    background-color: #1A3C5E;
+}
+
+.pergunta-card p {
+    font-size: 13px;
+    color: #555;
+}
+
+.pergunta-rodape {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #46D1DD;
+    font-weight: 600;
+}
+
+.btn-pergunta {
+    background-color: #46D1DD;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn-pergunta:hover {
+    background-color: #1A3C5E;
+}
+
+/* Rodapé info */
+.info-rodape {
+    background-color: #1A3C5E;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 60px 40px;
+}
+
+.area-inf {
+    width: 200px;
+}
+
+.area-inf:first-child {
+    flex: 0 0 100%;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.area-inf h3 {
+    color: #46D1DD;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.area-inf p {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.area-inf ul {
+    list-style: none;
+    padding: 0;
+}
+
+.area-inf ul li {
+    margin-bottom: 10px;
+}
+
+.area-inf ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.area-inf ul li a:hover {
+    color: #46D1DD;
+}
+
+.Profissoes {
+    background-color: #1A3C5E;
+    padding: 40px 80px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.Profissoes h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.coluna-profi {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.profissao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profissao a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.profissao a:hover {
+    color: #46D1DD;
+}
+
+/* Footer */
+.rodape {
+    background-color: #1A3C5E;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+}
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    justify-items: center;
+}
+
+.redes-sociais a {
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.redes-sociais a:hover {
+    color: #46D1DD;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botão voltar ao topo */
+.btn-topo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #46D1DD;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
+    z-index: 999;
+}
+
+.btn-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btn-topo:hover {
+    background-color: #1A3C5E;
+}
+
+@media (max-width: 480px) {
+    .btn-topo {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 16px;
+    }
+}
+
+/* Menu de partilha para redes sociais */
+.menu-partilha {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 10;
+    min-width: 160px;
+}
+
+.menu-partilha a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.menu-partilha a:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-partilha a i {
+    width: 16px;
+    text-align: center;
+}
+
+.menu-partilha a .fa-whatsapp {
+    color: #25D366;
+}
+
+.menu-partilha a .fa-facebook {
+    color: #1877f2;
+}
+
+.btn-partilhar {
+    background: none;
+    border: 1px solid #e0e0e0;
+    color: #555;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-partilhar:hover {
+    background-color: #f5f5f5;
+    border-color: #46D1DD;
+}
+
+/* Botão hambúrguer (escondido no desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 6px 10px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+        gap: 10px;
+        position: relative;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        order: 4;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    header nav.nav-aberto {
+        max-height: 500px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .header-pesquisa {
+        width: 100%;
+        order: 3;
+    }
+
+    .header-pesquisa input {
+        width: 80%;
+    }
+
+    header nav .pesquisa {
+        width: 100%;
+        justify-content: center;
+        padding: 0 15px 15px;
+    }
+
+    header nav .pesquisa input {
+        flex: 1;
+        max-width: 260px;
+    }
+
+    .hero-banner {
+        height: 200px;
+    }
+
+    .hero-banner img {
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .hero-slogan h1 {
+        font-size: 22px;
+    }
+
+    .passos {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .passo {
+        width: 140px;
+    }
+
+    .caixas {
+        flex-direction: column;
+    }
+
+    .caixa-esquerda {
+        border-right: none;
+        border-bottom: 10px solid #fff;
+    }
+
+    .perguntas-grelha {
+        grid-template-columns: 1fr;
+    }
+
+    .info-rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .area-inf {
+        width: 100%;
+    }
+
+    .coluna-profi {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .Profissoes {
+        padding: 40px 20px;
+    }
+}
+
+/* ===== TELEMOVEIS PEQUENOS ===== */
+@media (max-width: 480px) {
+
+    .hero-slogan h1 {
+        font-size: 18px;
+    }
+
+    .icone-passo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icone-passo i {
+        font-size: 30px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .coluna-profi {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* ============================================================
+   Botão de alternar dark mode (flutuante, canto inferior esquerdo)
+   ============================================================ */
+.toggle-dark {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #1A3C5E;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+    z-index: 999;
+}
+
+.toggle-dark:hover {
+    background-color: #46D1DD;
+    transform: scale(1.06);
+}
+
+@media (max-width: 480px) {
+    .toggle-dark {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        left: 15px;
+        font-size: 16px;
+    }
+}
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+body.dark-mode {
+    background-color: #121212;
+    color: #e6e6e6;
+}
+
+body.dark-mode section,
+body.dark-mode main,
+body.dark-mode .legal {
+    background-color: #121212;
+    color: #e6e6e6;
+}
+
+/* Cartões e blocos que eram brancos passam a cinza-escuro */
+body.dark-mode [class$="-card"],
+body.dark-mode [class$="-form"],
+body.dark-mode [class$="-item"],
+body.dark-mode .hero-caixa,
+body.dark-mode .faq,
+body.dark-mode .faq-item,
+body.dark-mode .legal-indice,
+body.dark-mode .legal-contacto,
+body.dark-mode .porque-esquerda,
+body.dark-mode .porque-bloco,
+body.dark-mode .btn-mais,
+body.dark-mode .erro-conteudo,
+body.dark-mode .pagina-404 {
+    background-color: #1e1e1e;
+    color: #e6e6e6;
+    border-color: #333333;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #ffffff;
+}
+
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode span,
+body.dark-mode summary {
+    color: #cfcfcf;
+}
+
+/* Botões com fundo teal fixo: mantêm texto branco em ambos os temas
+   (o texto genérico de links do dark mode não se aplica aqui) */
+body.dark-mode .pergunta-titulo,
+body.dark-mode .btn-pergunta,
+body.dark-mode .btn-voltar,
+body.dark-mode .nav-botao,
+body.dark-mode .btn-enviar,
+body.dark-mode .btn-topo,
+body.dark-mode .btn-galeria {
+    color: #ffffff;
+}
+
+/* Links de listas em cartões escuros (ex: mapa do site) */
+body.dark-mode .mapa-card ul li a {
+    color: #cfcfcf;
+}
+
+body.dark-mode .mapa-card ul li a:hover {
+    color: #46D1DD;
+}
+
+/* Links dentro do conteúdo (não afecta o menu do cabeçalho) */
+body.dark-mode section a,
+body.dark-mode .legal a {
+    color: #6fe0ea;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border-color: #444444;
+}
+
+body.dark-mode input::placeholder {
+    color: #999999;
+}
+
+body.dark-mode .erro {
+    color: #ff8a80;
+}
+
+body.dark-mode .mensagem-sucesso {
+    background-color: #143d24;
+    color: #8ce6a8;
+}
+
+/* ============================================================
+   Carrossel / slider (genérico) — inspirado em padrões usados
+   pela Apple/Sony: imagem grande, setas discretas que aparecem
+   ao passar o rato, indicador activo em forma de pílula.
+   ============================================================ */
+.carrossel {
+    position: relative;
+}
+
+.carrossel-viewport {
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.carrossel-track {
+    display: flex;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carrossel-slide {
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.carrossel-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1A3C5E;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.25s ease, background 0.2s, transform 0.2s ease;
+}
+
+.carrossel:hover .carrossel-seta,
+.carrossel:focus-within .carrossel-seta {
+    opacity: 1;
+}
+
+.carrossel-seta:hover {
+    background-color: #46D1DD;
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.carrossel-anterior {
+    left: 14px;
+}
+
+.carrossel-seguinte {
+    right: 14px;
+}
+
+.carrossel-pontos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.carrossel-pontos button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #d5d5d5;
+    cursor: pointer;
+    transition: background 0.25s ease, width 0.25s ease;
+}
+
+.carrossel-pontos button:hover {
+    background-color: #9fdee4;
+}
+
+.carrossel-pontos button.activo {
+    background-color: #46D1DD;
+    width: 22px;
+}
+
+@media (hover: none) {
+    /* em ecrãs táteis as setas ficam sempre visíveis, já que não há "hover" */
+    .carrossel-seta {
+        opacity: 1;
+    }
+}
+
+/* Destaques da homepage: 3 imagens estáticas lado a lado, com legenda */
+.hero-caixas {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 2rem;
+    margin: -80px auto 0;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-caixa {
+    position: relative;
+    background-color: #ffffff;
+    flex: 1;
+    height: 190px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero-caixa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-caixa-legenda {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 24px 16px 12px;
+    background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));
+}
+
+.hero-caixa-legenda span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+    .hero-caixas {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: -30px;
+    }
+    .hero-caixa {
+        flex: 1 1 45%;
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-caixa {
+        flex: 1 1 100%;
+    }
+}
+
+/* Carrossel da galeria: 3 por vista no desktop, com efeito de
+   zoom subtil na imagem ao passar o rato (padrão usado em e-commerce) */
+.galeria-carrossel {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.galeria-carrossel .carrossel-viewport {
+    border-radius: 0;
+}
+
+.galeria-carrossel .carrossel-slide {
+    flex: 0 0 33.3333%;
+    padding: 0 10px;
+}
+
+.galeria-carrossel .galeria-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-carrossel .galeria-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.galeria-imagem-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-partilhar-icone {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.9);
+    color: #1A3C5E;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.galeria-item:hover .btn-partilhar-icone {
+    opacity: 1;
+}
+
+.btn-partilhar-icone:hover {
+    background-color: #46D1DD;
+    color: #ffffff;
+}
+
+@media (hover: none) {
+    .btn-partilhar-icone {
+        opacity: 1;
+    }
+}
+
+.galeria-carrossel .galeria-item img {
+    transition: transform 0.5s ease;
+}
+
+.galeria-carrossel .carrossel-slide:hover img {
+    transform: scale(1.08);
+}
+
+@media (max-width: 900px) {
+    .galeria-carrossel .carrossel-slide {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria-carrossel .carrossel-slide {
+        flex: 0 0 100%;
+    }
+}

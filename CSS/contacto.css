@@ -1,0 +1,92 @@
+.contacto {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #f5f5f5;
+    min-height: 70vh;
+}
+
+.contacto h2 {
+    font-size: 28px;
+    color: #1A3C5E;
+    margin-bottom: 10px;
+}
+
+.contacto > p {
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    font-size: 15px;
+}
+
+/* 3 colunas */
+.contacto-colunas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contacto-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.contacto-card i {
+    font-size: 30px;
+    color: #46D1DD;
+}
+
+.contacto-card h3 {
+    font-size: 18px;
+    color: #1A3C5E;
+}
+
+.contacto-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.contacto-card a {
+    color: #46D1DD;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contacto-card a:hover {
+    text-decoration: underline;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+    .contacto {
+        padding: 40px 20px;
+    }
+
+    .contacto-colunas {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ===== TELEMÓVEIS PEQUENOS ===== */
+@media (max-width: 480px) {
+    .contacto h2 {
+        font-size: 22px;
+    }
+
+    .contacto-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-card {
+        padding: 20px;
+    }
+}

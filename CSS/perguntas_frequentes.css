@@ -1,0 +1,82 @@
+.faq {
+    padding: 60px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    font-size: 28px;
+    color: #1A3C5E;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* remove o triângulo padrão do browser */
+.faq-item summary {
+    list-style: none;
+}
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-pergunta {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.faq-pergunta i {
+    color: #46D1DD;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+/* roda a seta quando abre */
+details[open] .faq-pergunta i {
+    transform: rotate(90deg);
+}
+
+.faq-resposta {
+    padding: 0 0 20px 0;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+    .faq {
+        padding: 40px 20px;
+    }
+}
+
+/* ===== TELEMÓVEIS PEQUENOS ===== */
+@media (max-width: 480px) {
+    .faq h2 {
+        font-size: 22px;
+    }
+
+    .faq-pergunta {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+
+    .faq-resposta {
+        font-size: 14px;
+    }
+}

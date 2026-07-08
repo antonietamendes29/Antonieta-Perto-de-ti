@@ -1,0 +1,130 @@
+.hero-banner {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner > img {
+    width: 100%;        /* imagem ocupa TODO o banner */
+    height: 100%;
+    object-fit: cover;
+}
+/* Secção Por que nós */
+.porque-nos {
+    background-color: #ffffff;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.porque-nos h2 {
+    font-size: 28px;
+    color: #1A3C5E;
+    margin-bottom: 15px;
+}
+
+.porque-nos > p {
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+/* Duas colunas */
+.porque-colunas {
+    display: flex;
+    gap: 40px;
+    text-align: left;
+}
+
+.porque-esquerda,
+.porque-direita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.porque-esquerda-img {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #d9ecef;
+}
+
+.porque-esquerda-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Blocos */
+.porque-bloco {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.porque-bloco i {
+    font-size: 28px;
+    color: #46D1DD;
+    margin-top: 3px;
+}
+
+.porque-bloco h3 {
+    color: #1A3C5E;
+    margin-bottom: 5px;
+}
+
+.porque-bloco p {
+    font-size: 14px;
+    color: #555;
+}
+
+.ler-mais {
+    color: #46D1DD;
+    text-decoration: underline;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 200px;
+    }
+
+    .porque-nos {
+        padding: 40px 20px;
+    }
+
+    .porque-colunas {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .porque-esquerda-img {
+        min-height: 220px;
+    }
+}
+
+/* ===== TELEMÓVEIS PEQUENOS ===== */
+@media (max-width: 480px) {
+    .porque-nos h2 {
+        font-size: 22px;
+    }
+
+    .porque-bloco {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .porque-esquerda-img {
+        min-height: 180px;
+    }
+}

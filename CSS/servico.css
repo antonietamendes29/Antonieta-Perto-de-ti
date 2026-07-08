@@ -1,0 +1,92 @@
+.servico-conteudo{
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 40px;
+}
+.servico-conteudo h2 {
+    font-size: 28px;
+    color: #1A3C5E;
+    margin-bottom: 15px;
+}
+.para{
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 40px auto;  
+}
+.servico-card > p {
+    padding: 12px 15px;
+    color: #333;
+    text-align: center;
+}
+.servicos-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 colunas fixas */
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.servico-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.servico-card:hover {
+    transform: translateY(-8px);
+}
+
+.servico-img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.servico-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servico-info {
+    padding: 15px;
+}
+
+.servico-info h3 {
+    font-size: 16px;
+    color: #1A3C5E;
+    margin-bottom: 5px;
+}
+
+.servico-info p {
+    font-size: 13px;
+    color: #888;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+    .servico-conteudo {
+        padding: 15px 20px;
+    }
+
+    .servicos-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ===== TELEMÓVEIS PEQUENOS ===== */
+@media (max-width: 480px) {
+    .servico-conteudo h2 {
+        font-size: 22px;
+    }
+
+    .servicos-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .servico-img {
+        height: 200px;
+    }
+}

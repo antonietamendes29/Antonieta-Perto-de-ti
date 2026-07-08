@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="160" viewBox="0 0 300 160">
+
+  <circle cx="110" cy="72" r="68" fill="#ffffff" fill-opacity="0.2"/>
+  <circle cx="110" cy="72" r="60" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <ellipse cx="110" cy="52" rx="20" ry="20" fill="#ffffff"/>
+  <path d="M90 59 Q90 88 110 108 Q130 88 130 59" fill="#ffffff"/>
+  <circle cx="110" cy="52" r="8" fill="#46D1DD"/>
+
+  <text x="195" y="58" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#ffffff" letter-spacing="0.5">Perto</text>
+  <text x="195" y="86" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#ffffff" letter-spacing="0.5">de Ti</text>
+  <line x1="195" y1="96" x2="272" y2="96" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  <text x="195" y="110" font-family="Georgia, serif" font-size="9" fill="#ffffff" letter-spacing="2">SERVIÇOS LOCAIS</text>
+
+</svg>

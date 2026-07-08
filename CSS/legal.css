@@ -1,0 +1,117 @@
+/* Páginas legais: Política de Privacidade e Termos e Condições */
+
+.legal {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px 70px;
+    color: #333;
+}
+
+.legal-cabecalho {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.legal-cabecalho h1 {
+    color: #1A3C5E;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.legal-cabecalho p {
+    color: #666;
+    font-size: 14px;
+}
+
+.legal-indice {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 40px;
+}
+
+.legal-indice h2 {
+    font-size: 16px;
+    color: #1A3C5E;
+    margin-bottom: 12px;
+}
+
+.legal-indice ol {
+    padding-left: 20px;
+}
+
+.legal-indice li {
+    margin-bottom: 6px;
+}
+
+.legal-indice a {
+    color: #1A3C5E;
+    text-decoration: none;
+}
+
+.legal-indice a:hover {
+    color: #46D1DD;
+    text-decoration: underline;
+}
+
+.legal-seccao {
+    margin-bottom: 32px;
+    scroll-margin-top: 90px;
+}
+
+.legal-seccao h2 {
+    color: #1A3C5E;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #46D1DD;
+    padding-bottom: 8px;
+}
+
+.legal-seccao h3 {
+    color: #1A3C5E;
+    font-size: 16px;
+    margin: 16px 0 8px;
+}
+
+.legal-seccao p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.legal-seccao ul {
+    padding-left: 22px;
+    margin-bottom: 12px;
+}
+
+.legal-seccao li {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 6px;
+}
+
+.legal-contacto {
+    background-color: #ffffff;
+    border-left: 4px solid #46D1DD;
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin-top: 40px;
+}
+
+.legal-contacto p {
+    margin-bottom: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .legal {
+        padding: 30px 16px 50px;
+    }
+    .legal-cabecalho h1 {
+        font-size: 24px;
+    }
+    .legal-seccao h2 {
+        font-size: 18px;
+    }
+}
