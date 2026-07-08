@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/cadastro.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-            <!-- Google Analytics (GA4) -->
+        
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQ0E4BD0GR"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -21,7 +21,6 @@
             gtag('config', 'G-SQ0E4BD0GR');
         </script>
 
-        <!-- Meta Pixel - substitui 000000000000000 pelo teu ID de pixel -->
         <script>
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -57,7 +56,6 @@
         <section class="cadastro">
             <div class="cadastro-colunas">
 
-                <!-- Formulário -->
                 <div class="cadastro-form">
                     <h2>Cadastro</h2>
                     <form id="form-cadastro" novalidate>
@@ -78,7 +76,11 @@
 
                         <div class="campo-form">
                             <label for="localizacao-busca">Localização (opcional)</label>
-                            <input type="text" id="localizacao-busca" placeholder="Pesquisar morada, bairro ou município...">
+                            <div class="grupo-pesquisa-mapa">
+                                <input type="text" id="localizacao-busca" placeholder="Pesquisar morada, bairro ou município...">
+                                <button type="button" id="botao-pesquisar-mapa" aria-label="Pesquisar localização"><i class="fas fa-search"></i></button>
+                            </div>
+                            <span class="erro" id="erro-localizacao"></span>
                         </div>
 
                         <input type="hidden" id="latitude" name="latitude">
@@ -90,8 +92,6 @@
                     </form>
                 </div>
 
-                <!-- Mapa interactivo (Google Maps API): clica ou arrasta o
-                     marcador para indicares a tua localização de serviço -->
                 <div class="cadastro-mapa">
                     <div id="mapa-cadastro"></div>
                     <p class="mapa-instrucao">
@@ -103,19 +103,18 @@
 
             </div>
         </section>
-        
-        <!-- Google Maps JavaScript API — substitui AIzaSyAKKQjZdaMoLw4bC3bcLjnH32DjN-qBva0
-             pela tua chave real (Google Cloud Console > APIs > Maps JavaScript API + Places API) -->
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKKQjZdaMoLw4bC3bcLjnH32DjN-qBva0&amp;libraries=places&amp;callback=inicializarMapaCadastro">
-        </script>
+
         <script src="JS/mapa.js"></script>
+
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKKQjZdaMoLw4bC3bcLjnH32DjN-qBva0&callback=inicializarMapaCadastro">
+        </script>
 
         <footer class="rodape">
             <p>&copy; 2026 Perto de Ti</p>
-                <p> Todos os direitos reservados</p>
+            <p> Todos os direitos reservados</p>
         </footer>
 
-    <script src="JS/main.js"></script>
+        <script src="JS/main.js"></script>
     </body>
 </html>
