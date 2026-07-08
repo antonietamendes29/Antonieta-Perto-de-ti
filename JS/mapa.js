@@ -7,7 +7,7 @@
    Funcionalidades:
    - Marcador arrastável (o utilizador pode mover para afinar)
    - Clique no mapa move o marcador para esse ponto
-   - Pesquisa por morada/bairro/município (Places Autocomplete)
+   - Pesquisa por morada/bairro/município (Nominatim OpenStreetMap - Gratuito)
    - Guarda a latitude/longitude em campos escondidos do
      formulário, prontos a ser enviados com o cadastro
    ========================================================== */
@@ -76,28 +76,72 @@ function atualizarCoordenadas(posicao) {
     }
 }
 
-// Pesquisa por morada/bairro (Google Places Autocomplete):
-// ao escolher um resultado, o mapa centra-se lá e move o marcador
+// Pesquisa por morada/bairro/município: Usa a API pública do Nominatim (OpenStreetMap)
+// para evitar custos e a necessidade de ativar faturação/cartão na Google Cloud.
+// O resultado atualiza o mapa e o marcador do Google Maps que já estão a funcionar.
 function inicializarPesquisaMorada() {
     const campoPesquisa = document.getElementById("localizacao-busca");
-    if (!campoPesquisa) {
+    const botaoPesquisar = document.getElementById("botao-pesquisar-mapa");
+    const campoErro = document.getElementById("erro-localizacao");
+    if (!campoPesquisa || !botaoPesquisar) {
         return;
     }
 
-    const autocomplete = new google.maps.places.Autocomplete(campoPesquisa, {
-        componentRestrictions: { country: "ao" }, // restringe a resultados em Angola
-        fields: ["geometry", "formatted_address"],
-    });
+    // Transformada em função assíncrona para usar fetch/await de forma limpa
+    async function pesquisar() {
+        const endereco = campoPesquisa.value.trim();
+        if (campoErro) campoErro.textContent = "";
 
-    autocomplete.addListener("place_changed", function () {
-        const local = autocomplete.getPlace();
-        if (!local.geometry || !local.geometry.location) {
-            return; // o utilizador escreveu algo sem escolher uma sugestão válida
+        if (endereco === "") {
+            return;
         }
 
-        mapaCadastro.setCenter(local.geometry.location);
-        mapaCadastro.setZoom(15);
-        marcadorCadastro.setPosition(local.geometry.location);
-        atualizarCoordenadas(local.geometry.location);
+        // acrescenta ", Angola" se o utilizador não o escreveu, para melhorar a precisão
+        const consulta = /angola/i.test(endereco) ? endereco : endereco + ", Angola";
+
+        // URL do Nominatim limitando a busca ao país Angola (countrycodes=ao)
+        const url = `https://nominatim.openstreetmap.org/search?format=json&countrycodes=ao&q=${encodeURIComponent(consulta)}`;
+
+        try {
+            // É obrigatório enviar um User-Agent na política do Nominatim para identificar a app
+            const resposta = await fetch(url, {
+                headers: {
+                    'User-Agent': 'PertoDeTi_App/1.0'
+                }
+            });
+            const resultados = await resposta.json();
+
+            if (resultados && resultados.length > 0) {
+                // Pegamos no primeiro resultado mais relevante retornado
+                const primeiroResultado = resultados[0];
+                const lat = parseFloat(primeiroResultado.lat);
+                const lng = parseFloat(primeiroResultado.lon);
+                
+                // Estrutura que o Google Maps aceita para posicionamento
+                const local = { lat: lat, lng: lng };
+
+                mapaCadastro.setCenter(local);
+                mapaCadastro.setZoom(15);
+                marcadorCadastro.setPosition(local);
+                atualizarCoordenadas(local);
+            } else {
+                if (campoErro) {
+                    campoErro.textContent = "Não foi possível encontrar essa localização. Tenta ser mais específico (ex: bairro + município).";
+                }
+            }
+        } catch (erro) {
+            console.error("Erro ao geocodificar com Nominatim:", erro);
+            if (campoErro) {
+                campoErro.textContent = "Ocorreu um erro ao pesquisar o endereço. Tenta novamente.";
+            }
+        }
+    }
+
+    botaoPesquisar.addEventListener("click", pesquisar);
+    campoPesquisa.addEventListener("keydown", function (evento) {
+        if (evento.key === "Enter") {
+            evento.preventDefault(); // não submete o formulário
+            pesquisar();
+        }
     });
 }
